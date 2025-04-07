@@ -1,0 +1,106 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+h1,h2,h3,h4,div,span,a {
+  font-family: "Inter", sans-serif;
+}
+p {
+  font-family: "DM Serif Text", serif;
+}
+
+@theme {
+    --breakpoint-xll: 1024px;
+    --breakpoint-3xl: 1440px;
+  
+    --color-bg: #000000;
+    --color-gray: #ABB2BF;
+    --color-primare: #C778DD;
+    --font-dm: 'DM Serif Text', serif;
+    --font-inter: 'Inter', sans-serif;
+
+    --text-67: 67px;
+    --text-26: 26px;
+    --text-51: 51px;
+    --text-58: 58px;
+    --text-38: 38px;
+    --text-32: 32px;
+    --text-28: 28px;
+    --text-22: 22px;
+    --text-12: 12px;
+    --text-78: 78px;
+    --text-40: 40px;
+    --text-42: 42px;
+    --text-60: 60px;
+  
+    --radius-20: 20px;
+    --radius-10: 10px;
+    --radius-14: 14px;
+    --radius-16: 16px;
+  
+    --spacing-0_5: 2px;
+    --spacing-1_4: 5px;
+    --spacing-1_5: 6px;
+    --spacing-1_9: 9px;
+    --spacing-2_5: 10px;
+    --spacing-3_5: 14px;
+    --spacing-3_6: 15px;
+    --spacing-4_5: 16px;
+    --spacing-4_8: 18px;
+    --spacing-5_3: 23px;
+    --spacing-6_5: 25px;
+    --spacing-6_6: 26px;
+    --spacing-6_7: 28px;
+    --spacing-7_5: 30px;
+    --spacing-8_5: 34px;
+    --spacing-10_5: 42px;
+    --spacing-10_6: 44px;
+    --spacing-40_2: 162px;
+    --spacing-12_5: 50px;
+    --spacing-12_6: 54px;
+    --spacing-14_5: 60px;
+    --spacing-14_7: 62px;
+    --spacing-16_5: 70px;
+    --spacing-16_6: 72px;
+    --spacing-24_5: 100px;
+    --spacing-24_6: 115px;
+    --spacing-24_7: 120px;
+    --spacing-33: 132px;
+    --spacing-33: 132px;
+    --spacing-36_5: 150px;
+    --spacing-36_6: 162px;
+    --spacing-20_2: 82px;
+  
+    --tracking-16: 16%;
+  
+    --leading-110: 110%;
+    --leading-120: 120%;
+    --leading-140: 140%;
+    --leading-150: 150%;
+    --leading-160: 160%;
+    --leading-auto: auto;
+  
+    --container-wrapper: 1920px;
+  
+    --shadow-ss2: 0px 0px 0px 4px #191919;
+    --shadow-ss1: 0px 0px 0px 6px #191919;
+    --ease-bounce: cubic-bezier(0.04, 1.25, 1, 1);
+  }
+  body {
+    background-color: var(--color-bg);
+
+  }
+nav {
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transform: translateX(100%);
+}
+
+  .hero {
+    background-image: url(assets/herobg.png);
+  }
+
+  @media screen and (min-width: 1024px) {
+    nav {
+      transform: translateX(0);
+    }
+  }
