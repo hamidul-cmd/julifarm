@@ -75,23 +75,77 @@ headettr.from(".open", {
   opacity: 0,
 });
 
-headettr.from(".hero__content h1", {
+gsap.from(".hero__content h1", {
   y: 80,
   duration: 0.8,
   stagger: 0.3,
   opacity: 0,
 });
-headettr.from(".hero__content p", {
+gsap.from(".hero__content p", {
   y: 80,
   duration: 0.8,
   stagger: 0.3,
   opacity: 0,
 });
-headettr.from(".hero__content a", {
+gsap.from(".hero__content a", {
   y: 80,
   duration: 0.8,
   stagger: 0.3,
   opacity: 0,
 });
+
+if (window.innerWidth > 1439) {
+  gsap.from(".page2 .vedio", {
+    transform: "translateX(-50%)",
+    opacity: 0,
+    duration: 0.8,
+    ease: "slow(0.7,0.7,false)",
+    scrollTrigger: {
+      trigger: ".page2 .vedio",
+      scroller: "body",
+      start: "top 85%",
+      end: "top 60%",
+    },
+  });
+
+  gsap.from(".page2 .page2__text", {
+    transform: "translateX(50%)",
+    opacity: 0,
+    duration: 0.8,
+    ease: "slow(0.7,0.7,false)",
+    scrollTrigger: {
+      trigger: ".page2 .page2__text",
+      scroller: "body",
+      start: "top 85%",
+      end: "top 60%",
+    },
+  });
+} else {
+  gsap.from(".page2 .vedio", {
+    transform: "translatey(50%)",
+    opacity: 0,
+    duration: 1,
+    ease: "slow(0.7,0.7,false)",
+    scrollTrigger: {
+      trigger: ".page2 .vedio",
+      scroller: "body",
+      start: "top 95%",
+      end: "top 85%",
+    },
+  });
+
+  gsap.from(".page2 .page2__text", {
+    transform: "translatey(50%)",
+    opacity: 0,
+    duration: 1,
+    ease: "slow(0.7,0.7,false)",
+    scrollTrigger: {
+      trigger: ".page2 .page2__text",
+      scroller: "body",
+      start: "top 95%",
+      end: "top 85%",
+    },
+  });
+}
 
 //desktop nav code over

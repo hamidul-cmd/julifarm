@@ -87,7 +87,7 @@ p {
   }
   body {
     background-color: var(--color-bg);
-
+    overflow-x: hidden;
   }
 nav {
   backdrop-filter: blur(6px);
