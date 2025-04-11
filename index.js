@@ -1,3 +1,15 @@
+//code fore smoothscroll
+// Initialize Lenis
+const lenis = new Lenis();
+
+// Use requestAnimationFrame to continuously update the scroll
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+
 // moblile nav code
 let open = document.querySelector(".open");
 let close = document.querySelector(".close");
@@ -147,5 +159,35 @@ if (window.innerWidth > 1439) {
     },
   });
 }
+// Create a ScrollTrigger for the cird section
+var cirdtr = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".cird",
+    scroller: "body",
+    start: "top 95%",
+    end: "top 85%",
+  },
+});
 
-//desktop nav code over
+cirdtr.from(".cird", {
+  y: 100,
+  opacity: 0,
+  duration: 1,
+  ease: "slow(0.7,0.7,false)",
+  stagger: 0.3,
+});
+
+var contentTimeline = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".cird",
+    scroller: "body",
+    start: "top 85%",
+    end: "top 75%",
+  },
+});
+
+contentTimeline.to(".cird__content", {
+  x: 0,
+  duration: 0.8,
+  ease: "slow(0.7,0.7,false)",
+});
